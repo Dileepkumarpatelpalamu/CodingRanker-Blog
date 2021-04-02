@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploading Page</title>
+</head>
+<body>
+    <style>
+        img
+        {
+            height: 200px;
+            width:100%;
+            border: 2px solid black;
+
+        }
+    </style>
+    
+    <h2>Files Upload</h2>
+    <form method="POST" name="POST" enctype="multipart/form-data" action="/uploads">
+        <label for="file">Select image to upload :</label>
+        <input type="file" name="file">
+        <input type="submit" value="upload" name="upload">
+    </form>
+    
+    {% for img in photos %}
+    <p><img src="{{url_for('static',filename='image/')}}{{img.fname}}"/></p>
+    {% endfor %}
+    
+</body>
+</html>

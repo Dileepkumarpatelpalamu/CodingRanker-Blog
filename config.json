@@ -1,0 +1,22 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri": "mysql://root:@localhost:3307/flaskblog",
+        "prod_url":"mysql://root:@localhost:3307/flaskblog",
+        "fb_url":"https://www.facebook.com/Dileepkumarpatel.94214",
+        "tw_url":"https://twitter.com/pateldileep51",
+        "git_url":"https://github.com/dileepkumarpatelpalamu",
+        "blog_title":"Welcone To CodingRanker",
+        "blog_name":"CodingRanker",
+        "blog_sub":"India most coder in last few years",
+        "user_admin":"pateldileep51@gmail.com",
+        "user_pass":"patel123",
+        "about_title":"About Us",
+        "about_subtitle":"The CodingRanker Keys point Designer !",
+        "about_text": "A CodingRanker specializes in secilifically development of World Wide Web application using a Client-Server Model. The applications typically use HTML, CSS and JavaScript in the client, Php, Asp.net, Python, Java in the server, and http for communications between client and server. A web content management system is often used to develop and maintain web applications. Now days we explore deep learn about web framework of Python like Flask & Django with better experiences.",
+        "contactus_title":"Contact Us",
+        "contactus_subtitle":"We are responsible and commited to your comments!",
+        "contactus_text":"Responsible clients give suggesion, advice to improve our Services"
+    }
+}

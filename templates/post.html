@@ -1,0 +1,40 @@
+{% extends "layout.html"%}
+{% block body %}
+  <!-- Page Header -->
+  
+  {% set img ='static/img/'+'post-bg.jpg' %}
+  <header class="masthead" style="background-image: url('{{img}}')">
+    <div class="overlay"></div>
+    {% for row in post %}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading text-justify">
+            <h1>{{row.title}}</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta text-justify">Posted by
+              <a href="{{row.sno}}">Posted Admin</a>
+              on {{row.date}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p class="text-justify"> {{row.content}}</p>
+
+          
+          
+        </div>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+
+  <hr>
+{% endblock %}

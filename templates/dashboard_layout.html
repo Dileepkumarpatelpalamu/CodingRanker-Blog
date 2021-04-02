@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>{{params['blog_name']}}</title>
+    <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet"
+        type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static',filename='css/clean-blog.min.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <a href="/" class="nav-link">{{params['blog_name']}}</a>
+    <div class="container text-center">
+        <h2 class="m-0 p-0">Wecome to Admin Panel</h2>
+        <div style="text-align: right; margin: 10px 0px;">
+            <p>Login as : <strong>{{session['user']}}</strong></p>
+        </div>
+        <div style="text-align: right; margin: 10px 0px;">
+            <a href="/addpost" class="btn btn-success">Add</a>
+            <a href="/logout" class="btn btn-dark">Logout</a>
+        </div>
+        {% block body %} {%endblock%}
+        
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="{{params['tw_url']}}" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{{params['fb_url']}}" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{{params['git_url']}}" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; {{params['blog_name']}} 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

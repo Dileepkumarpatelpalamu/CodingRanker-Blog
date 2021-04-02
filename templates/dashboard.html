@@ -1,0 +1,25 @@
+{% extends "Dashboard_layout.html"%}
+{% block body %}
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+            <th>Sno.</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in record %}
+        <tr>
+            <td>{{row.sno}}</th>
+            <td>{{row.title}}</td>
+            <td>{{row.date}}</td>
+            <td class="text-center"> <a href="update/{{row.sno}}" class="btn btn-success">update</a></td>
+            <td class="text-center"><a href ="delete/{{row.sno}}"class="btn btn-danger">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
