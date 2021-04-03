@@ -25,6 +25,7 @@
             <h2 class="post-title text-justify">
               {{row.title}}
             </h2>
+            <img src="{{url_for('static',filename='image/')}}{{row.img_file}}" alt="Uploaded Image File" class="img-fluid">
             <h3 class="post-subtitle text-justify">
               {{row.content[0:70]}}
             </h3>

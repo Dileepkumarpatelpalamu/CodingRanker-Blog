@@ -2,6 +2,7 @@ from flask import Flask,render_template,request,session,redirect
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import os
+import time
 from datetime import datetime
 import json
 with open("config.json") as c:
@@ -31,7 +32,14 @@ class Post(db.Model):
     date = db.Column(db.String(12), nullable=False)
     def __repr__(self):
         return f"{self.sno,self.title,self.slug,self.content,self.date}"
-
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    email = db.Column(db.String(12), nullable=False)
+    password = db.Column(db.String(120), nullable=False)
+    date = db.Column(db.String(12), nullable=False)
+    def __repr__(self):
+        return f"{self.sno,self.title,self.slug,self.content,self.date}"
 
 @app.route("/")
 def home():
@@ -68,9 +76,12 @@ def addpost():
         slug=request.form.get('slug')
         content= request.form.get('content')
         img_file= request.files['post_img']
+        img_file.filename= str(time.time()).split('.')[0] +'.' + img_file.filename.split('.')[-1]
         post=Post(title=title,slug=slug,content=content,img_file=img_file.filename,date=datetime.now())
         db.session.add(post)
         db.session.commit()
+        filename = secure_filename(img_file.filename)
+        img_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         post=Post.query.all()
         return render_template("dashboard.html",params=params,user=session,record=post)
 @app.route("/login", methods=["POST","GET"])

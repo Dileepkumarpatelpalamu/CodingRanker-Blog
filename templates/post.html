@@ -25,7 +25,9 @@
   <article>
     <div class="container">
       <div class="row">
+        
         <div class="col-lg-8 col-md-10 mx-auto">
+          <img src="{{url_for('static',filename='image/')}}{{row.img_file}}" alt="Uploaded Image File" class="img-fluid">
           <p class="text-justify"> {{row.content}}</p>
 
           
