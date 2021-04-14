@@ -50,7 +50,7 @@ Following application install in our system -
 - Flask
 - Mysql Server
 ### Customization of CodeRanker Blog Site -
-    you will be carefully to customize the blog site. if any mistake project not be configure completely. so above mention file config.json open in any text editors like notepad, code editor and any others following the steps -
+you will be carefully to customize the blog site. if any mistake project not be configure completely. so above mention file config.json open in any text editors like notepad, code editor and any others following the steps -
 - "local_server":"True",
 - "local_uri": "local database configuration",
 - "prod_url":"online database configuration",
