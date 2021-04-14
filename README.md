@@ -49,3 +49,25 @@ Following application install in our system -
 - MySqlalchemy
 - Flask
 - Mysql Server
+### Customization of CodeRanker Blog Site -
+    you will be carefully to customize the blog site. if any mistake project not be configure completely. so above mention file config.json open in any text editors like notepad, code editor and any others following the steps -
+- "local_server":"True",
+- "local_uri": "local database configuration",
+- "prod_url":"online database configuration",
+- "fb_url":"Enter your facebook url",
+- "tw_url":"Enter your twitter url of your account",
+- "git_url":"Enter your github account url or paths",
+- "blog_title":"Enter Blog Title",
+- "blog_name":"Enter Blog Name",
+- "blog_sub":"blog sub heading",
+- "user_admin":"admin user id or email",
+- "user_pass":"admin password",
+- "about_title":"About us title",
+- "about_subtitle":"about us page sub title",
+- "about_text": " about us text here",
+- "contactus_title":"Enter contact us title",
+- "contactus_subtitle":"Enter contact us title",
+- "contactus_text":"Contact text like heading"
+### At save files and run your project. I hope you so you should not be problems. any problem contact with me.
+
+--------------Thank you best of luck---------------
